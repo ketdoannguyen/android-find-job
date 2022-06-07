@@ -1,4 +1,4 @@
-package com.android.app_findjob.ui.dashboard;
+package com.android.app_findjob.ui;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,18 +10,20 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.android.app_findjob.databinding.FragmentDashboardBinding;
+import com.android.app_findjob.databinding.FragmentBlogBinding;
+import com.android.app_findjob.databinding.FragmentJobBinding;
+import com.android.app_findjob.ui.dashboard.DashboardViewModel;
 
-public class DashboardFragment extends Fragment {
+public class JobFragment extends Fragment {
 
-    private FragmentDashboardBinding binding;
+    private FragmentJobBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         DashboardViewModel dashboardViewModel =
                 new ViewModelProvider(this).get(DashboardViewModel.class);
 
-        binding = FragmentDashboardBinding.inflate(inflater, container, false);
+        binding = FragmentJobBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
         return root;

@@ -6,9 +6,12 @@
         <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/drawable/ic_notifications_black_24dp.xml" value="0.1565" />
         <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/activity_home.xml" value="0.2" />
         <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/activity_login.xml" value="0.18614130434782608" />
+        <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/fragment_blog.xml" value="0.18614130434782608" />
         <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/fragment_dashboard.xml" value="0.2" />
         <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/fragment_home.xml" value="0.264" />
+        <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/fragment_job.xml" value="0.18614130434782608" />
         <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/fragment_notifications.xml" value="0.11302083333333333" />
+        <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/fragment_profile.xml" value="0.18614130434782608" />
         <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/z_categories_item_view.xml" value="0.18614130434782608" />
         <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/z_list_job_item_home.xml" value="0.18614130434782608" />
         <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/z_list_notification.xml" value="0.18614130434782608" />
