@@ -15,14 +15,15 @@
             android:name=".view.ForgetPasswordActivity"
             android:exported="false" />
         <activity
-            android:name=".view.HomeActivity"
-            android:exported="false" />
-        <activity
             android:name=".view.RegisterActivity"
             android:exported="false" />
         <activity
             android:name=".view.LoginActivity"
             android:exported="false" />
+        <activity
+            android:name=".view.HomeActivity"
+            android:exported="false"
+            android:theme="@style/FullScreen" />
         <activity
             android:name=".view.MainActivity"
             android:exported="true">

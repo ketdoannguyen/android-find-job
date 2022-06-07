@@ -3,6 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/drawable/ic_notifications_black_24dp.xml" value="0.1565" />
+        <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/activity_home.xml" value="0.2" />
+        <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/activity_login.xml" value="0.18614130434782608" />
+        <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/fragment_dashboard.xml" value="0.2" />
+        <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/fragment_home.xml" value="0.264" />
+        <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/fragment_notifications.xml" value="0.11302083333333333" />
+        <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/z_categories_item_view.xml" value="0.18614130434782608" />
+        <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/z_list_job_item_home.xml" value="0.18614130434782608" />
+        <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/z_list_notification.xml" value="0.18614130434782608" />
+        <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/menu/bottom_nav_menu.xml" value="0.11302083333333333" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/App_FindJob/app/src/main/res/font/crafty_girls.xml" value="0.19537037037037036" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/App_FindJob/app/src/main/res/layout/activity_forget_password.xml" value="0.16621376811594202" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/App_FindJob/app/src/main/res/layout/activity_home.xml" value="0.16621376811594202" />
