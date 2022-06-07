@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.App_FindJob">
         <activity
+            android:name=".DetailJobActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.ForgetPasswordActivity"
             android:exported="false" />
         <activity

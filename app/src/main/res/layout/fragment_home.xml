@@ -142,21 +142,21 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
 
-                            <androidx.recyclerview.widget.RecyclerView
-                                android:id="@+id/categories"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal"
-                                android:layout_marginTop="10dp"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent"
-                                tools:itemCount="1"
-                                tools:listitem="@layout/z_categories_item_view"
-                                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
+<!--                            <androidx.recyclerview.widget.RecyclerView-->
+<!--                                android:id="@+id/categories"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:orientation="horizontal"-->
+<!--                                android:layout_marginTop="10dp"-->
+<!--                                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                                app:layout_constraintStart_toStartOf="parent"-->
+<!--                                app:layout_constraintTop_toTopOf="parent"-->
+<!--                                tools:itemCount="1"-->
+<!--                                tools:listitem="@layout/z_categories_item_view"-->
+<!--                                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">-->
 
 
-                            </androidx.recyclerview.widget.RecyclerView>
+<!--                            </androidx.recyclerview.widget.RecyclerView>-->
 
                             <TextView
                                 android:id="@+id/textView"
@@ -174,7 +174,7 @@
                                 app:layout_constraintTop_toBottomOf="@+id/categories" />
 
                             <androidx.recyclerview.widget.RecyclerView
-                                android:id="@+id/listProduct"
+                                android:id="@+id/listJob"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_marginTop="10dp"
