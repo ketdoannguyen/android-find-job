@@ -55,7 +55,7 @@ public class ListJobHomeAdaterr extends RecyclerView.Adapter<ListJobHomeAdaterr.
         holder.layout.setOnClickListener(view ->{
             Intent i = new Intent(mContext, DetailJobActivity.class);
             Bundle mBundle  = new Bundle();
-            mBundle.putSerializable("Job", job);
+            mBundle.putInt("ID",job.getId());
             i.putExtras(mBundle);
             mContext.startActivity(i);
         });

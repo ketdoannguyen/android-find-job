@@ -1,9 +1,18 @@
 package com.android.app_findjob.ui;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.os.PowerManager;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -13,6 +22,7 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.android.app_findjob.R;
 import com.android.app_findjob.adapter.ListJobHomeAdaterr;
 import com.android.app_findjob.databinding.FragmentHomeBinding;
 import com.android.app_findjob.model.Employer;
@@ -38,6 +48,10 @@ public class HomeFragment extends Fragment {
 
         showJobHome();
 
+        binding.txtSearch.setOnClickListener(view -> {
+            showDialogSearch();
+        });
+
         return root;
     }
 
@@ -58,5 +72,23 @@ public class HomeFragment extends Fragment {
         LinearLayoutManager layout = new LinearLayoutManager(getContext());
         rView.setLayoutManager(layout);
         rView.setAdapter(jobAdapter);
+    }
+
+    private void showDialogSearch(){
+        final Dialog dialog = new Dialog(getContext());
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.dialog_search);
+
+        Window window = dialog.getWindow();
+        if(window == null){
+            return;
+        }
+        window.setLayout(WindowManager.LayoutParams.MATCH_PARENT,WindowManager.LayoutParams.WRAP_CONTENT);
+        window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        WindowManager.LayoutParams windowAttribute = window.getAttributes();
+        windowAttribute.gravity = Gravity.TOP;
+
+//        EditText editText = dialog.findViewById(R.id.layout);
+        dialog.show();
     }
 }

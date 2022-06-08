@@ -9,7 +9,7 @@
     tools:context=".DetailJobActivity">
 
     <LinearLayout
-        android:id="@+id/lyNote"
+        android:id="@+id/layoutTop"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/shape_detailjob"
@@ -46,8 +46,8 @@
             android:id="@+id/txtNameJob"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="15dp"
             android:letterSpacing="0.05"
             android:lineSpacingExtra="5dp"
             android:text="UI Frontend Engineer"

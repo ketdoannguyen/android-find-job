@@ -3,18 +3,23 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/drawable-ldpi/shape_search_dialog.xml" value="0.2505" />
         <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/drawable/aa.xml" value="0.124" />
         <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/drawable/ic_notifications_black_24dp.xml" value="0.1565" />
         <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/drawable/shape_applyjob.xml" value="0.124" />
         <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/drawable/shape_bar.xml" value="0.111" />
         <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/drawable/shape_detailjob.xml" value="0.111" />
         <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/drawable/shape_hot.xml" value="0.1565" />
-        <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/activity_detail_job.xml" value="0.4" />
+        <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/activity_detail_employer.xml" value="0.264" />
+        <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/activity_detail_job.xml" value="0.264" />
         <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/activity_home.xml" value="0.2" />
         <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/activity_login.xml" value="0.18614130434782608" />
+        <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/dialog_search.xml" value="0.2" />
         <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/fragment_blog.xml" value="0.18614130434782608" />
         <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/fragment_dashboard.xml" value="0.2" />
-        <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/fragment_home.xml" value="0.176" />
+        <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/fragment_employer.xml" value="0.1897644927536232" />
+        <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/fragment_home.xml" value="0.2" />
         <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/fragment_job.xml" value="0.18614130434782608" />
         <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/fragment_notifications.xml" value="0.11302083333333333" />
         <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/fragment_profile.xml" value="0.18614130434782608" />

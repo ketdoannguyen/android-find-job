@@ -10,6 +10,7 @@
         android:id="@+id/navigation_job"
         android:icon="@drawable/ic_launcher_gardening"
         android:title="Job" />
+
     <item
         android:id="@+id/navigation_blog"
         android:icon="@drawable/ic_launcher_notification"

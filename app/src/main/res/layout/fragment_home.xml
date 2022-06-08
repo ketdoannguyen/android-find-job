@@ -13,42 +13,32 @@
         tools:context=".ui.HomeFragment">
 
         <LinearLayout
-            android:id="@+id/lyTop"
+            android:id="@+id/layoutSearch"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="15dp"
             android:layout_margin="20dp"
             android:orientation="horizontal">
 
-            <EditText
+            <Button
                 android:id="@+id/txtSearch"
-                android:layout_width="320dp"
+                android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@drawable/shape_search"
                 android:queryBackground="@android:color/transparent"
                 android:hint="Nhập từ khóa việc làm IT"
                 android:drawableStart="@drawable/search"
-                android:drawablePadding="20dp"
+                android:drawablePadding="-20dp"
                 android:paddingStart="20dp"
                 android:paddingEnd="10dp"
-                android:focusable="false"
-                android:layout_gravity="center_vertical"
-                android:inputType="text"
+                android:letterSpacing="0.08"
+                android:textSize="18dp"
                 android:autofillHints="name"/>
 
-            <ImageView
-                android:id="@+id/imgCart"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:contentDescription="@string/todo"
-                android:padding="5dp"
-                android:src="@drawable/cart"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="15dp"/>
 
         </LinearLayout>
 
@@ -59,7 +49,7 @@
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/lyTop">
+            app:layout_constraintTop_toBottomOf="@+id/layoutSearch">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"

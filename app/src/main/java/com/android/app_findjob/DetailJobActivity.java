@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.LinearLayout;
 
 import com.android.app_findjob.databinding.ActivityDetailJobBinding;
 import com.android.app_findjob.databinding.ActivityLoginBinding;
@@ -13,6 +14,7 @@ import com.android.app_findjob.view.HomeActivity;
 
 public class DetailJobActivity extends AppCompatActivity {
     private ActivityDetailJobBinding binding ;
+    private LinearLayout layoutTop ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,9 +24,17 @@ public class DetailJobActivity extends AppCompatActivity {
             startActivity(new Intent(this, HomeActivity.class));
         });
 
+        binding.layoutTop.setOnClickListener(view -> {
+            Intent i = new Intent(this, DetailEmployerActivity.class);
+            Bundle mBundle  = new Bundle();
+            mBundle.putString("NameEmployer",binding.txtNameEmployer.getText().toString());
+            i.putExtras(mBundle);
+            startActivity(i);
+        });
+
         Intent intent = getIntent();
-        Job value1 = intent.getParcelableExtra("Job");
-        System.out.println(value1.getName());
+        int value1 = intent.getIntExtra("ID",-1);
+        System.out.println(value1);
 
 
     }

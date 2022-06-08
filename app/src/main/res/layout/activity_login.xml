@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/bgr2"
     tools:context=".view.LoginActivity">
+
     <LinearLayout
         android:id="@+id/lyt_start"
         android:layout_width="match_parent"
@@ -47,7 +48,9 @@
         android:layout_below="@+id/lyt_start"
         android:gravity="center_horizontal"
         android:orientation="vertical"
-        android:padding="45dp">
+        android:paddingLeft="45dp"
+        android:paddingTop="20dp"
+        android:paddingRight="45dp">
 
 
         <TextView
@@ -125,6 +128,16 @@
             android:textSize="11sp"
             android:textStyle="bold" />
 
+        <CheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:background="@drawable/shape_note"
+            android:padding="15dp"
+            android:text="Login as employer"
+            android:textColor="@color/text"
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/txtForgot_pass"
@@ -136,6 +149,7 @@
             android:textAllCaps="false"
             android:textColor="@color/text"
             android:textSize="18sp" />
+
 
         <Button
             android:id="@+id/btn_login"
@@ -165,7 +179,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="15dp">
+            android:layout_marginTop="5dp">
 
             <View
                 android:layout_width="140dp"
@@ -196,7 +210,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="15dp">
+            android:layout_marginTop="5dp">
 
             <ImageButton
                 android:id="@+id/btn_loginGoogle"
