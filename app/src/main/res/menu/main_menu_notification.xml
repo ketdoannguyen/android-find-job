@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menuRead"
+        android:icon="@drawable/btnread"
+        android:title="Mark read all"/>
+    <item
+        android:id="@+id/menuSetting"
+        android:icon="@drawable/imgsetting"
+        android:title="Settings"
+        />
+</menu>

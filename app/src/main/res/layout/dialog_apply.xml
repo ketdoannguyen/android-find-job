@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/shape_search_dialog"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvJob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:text="FullStack Developer"
+                android:textSize="19sp"
+                android:gravity="center"/>
+            <TextView
+                android:id="@+id/tvEmployer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:text="Koh Young Technology Inc"
+                android:textSize="22sp"
+                android:gravity="center"/>
+
+
+            <LinearLayout
+                android:id="@+id/layoutSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:orientation="horizontal"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:id="@+id/tv2"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:text="Họ và tên  :"
+                    android:textSize="18sp"/>
+                <EditText
+                    android:id="@+id/txtName"
+                    android:layout_width="240dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/shape_name_apply"
+                    android:hint="Nhập họ và tên của bạn"
+                    android:letterSpacing="0.05"
+                    android:textSize="18sp"
+                    android:paddingStart="10dp"
+                    android:gravity="left|center"
+                    android:autofillHints="name"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layoutCV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:orientation="horizontal"
+                android:paddingTop="15dp">
+
+                <TextView
+                    android:id="@+id/tv3"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:text="Tải lên CV :"
+                    android:textSize="18sp"/>
+                <Button
+                    android:id="@+id/btnUploadCV1"
+                    android:layout_width="115dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/shape_name_apply"
+                    android:hint="Chọn tệp"
+                    android:letterSpacing="0.05"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:autofillHints="name"/>
+                <Button
+                    android:id="@+id/btnUploadCV2"
+                    android:layout_width="115dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/shape_name_apply"
+                    android:hint="CV đã lưu"
+                    android:letterSpacing="0.05"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:autofillHints="name"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layoutSkill"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:orientation="vertical"
+                android:paddingTop="15dp">
+
+                <TextView
+                    android:id="@+id/tv4"
+                    android:layout_width="340dp"
+                    android:layout_height="wrap_content"
+                    android:text="Những kỹ năng, dự án công việc hoặc thành tích tốt của bạn :"
+                    android:textSize="18sp"/>
+                <EditText
+                    android:id="@+id/txtSkill"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:background="@drawable/shape_name_apply"
+                    android:hint="Thông tin chi tiết và ví dụ cụ thể ..."
+                    android:letterSpacing="0.05"
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingTop="5dp"
+                    android:gravity="left"
+                    android:autofillHints="name"/>
+
+
+            </LinearLayout>
+            <Button
+                android:id="@+id/btnApply"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="20dp"
+                android:background="@drawable/shape_applyjob"
+                android:letterSpacing="0.15"
+                android:text="Gởi CV của tôi" />
+
+        </LinearLayout>
+</layout>

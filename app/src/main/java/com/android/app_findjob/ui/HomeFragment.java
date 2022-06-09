@@ -1,20 +1,15 @@
 package com.android.app_findjob.ui;
 
-import android.app.AlertDialog;
 import android.app.Dialog;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.os.PowerManager;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.EditText;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -23,20 +18,29 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.app_findjob.R;
-import com.android.app_findjob.adapter.ListJobHomeAdaterr;
+import com.android.app_findjob.adapter.ListEmployerHomeAdapter;
+import com.android.app_findjob.adapter.ListJobHomeAdapter;
 import com.android.app_findjob.databinding.FragmentHomeBinding;
 import com.android.app_findjob.model.Employer;
 import com.android.app_findjob.model.Job;
 import com.android.app_findjob.ui.home.HomeViewModel;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
 public class HomeFragment extends Fragment {
 
     private FragmentHomeBinding binding;
-    private RecyclerView rView ;
-    private ArrayList<Job> jobList ;
-    private ListJobHomeAdaterr jobAdapter ;
+    private RecyclerView rView1, rView2;
+    private ArrayList<Job> jobList;
+    private ListJobHomeAdapter jobAdapter;
+    private ArrayList<Employer> employerList;
+    private ListEmployerHomeAdapter employerAdapter;
+
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -46,6 +50,7 @@ public class HomeFragment extends Fragment {
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
+        showEmployerHome();
         showJobHome();
 
         binding.txtSearch.setOnClickListener(view -> {
@@ -61,29 +66,81 @@ public class HomeFragment extends Fragment {
         binding = null;
     }
 
-    private void showJobHome(){
-        rView = binding.listJob ;
+    private void showJobHome() {
+        rView1 = binding.listJob;
         jobList = new ArrayList<>();
-        Job job1 = new Job(0,"Java Developer","Java MySQL Spring English","~3000$","Da Nang",new Employer("https://itviec.com/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBMmZvSXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--a72d8a6545664966af9f6674fde5e1164b55ced4/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBPZ2wzWldKd09oSnlaWE5wZW1WZmRHOWZabWwwV3dkcEFhb3ciLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--a364054a300021d6ece7f71365132a9777e89a21/Logo%20MB%20he%20mau%20RGB%2001.png"));
-        Job job2 = new Job(1,"UI Frontend Engineer","HTTML5 CSS JavaScript","3000$-5000$","TP HCM",new Employer("https://itviec.com/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBODF1SkE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--595dd5debbc6d4f7b9b22ddeca4bb33da94b25ca/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBPZ2wzWldKd09oSnlaWE5wZW1WZmRHOWZabWwwV3dkcEFhb3ciLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--a364054a300021d6ece7f71365132a9777e89a21/Naver_Logo(2)-white.png"));
-        jobList.add(job1);
-        jobList.add(job2);
-        jobAdapter = new ListJobHomeAdaterr(getContext(),jobList);
-        LinearLayoutManager layout = new LinearLayoutManager(getContext());
-        rView.setLayoutManager(layout);
-        rView.setAdapter(jobAdapter);
+        DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("Job");
+        mDatabase.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshotJob) {
+                jobList.removeAll(jobList);
+                for (DataSnapshot postSnapshotJob : dataSnapshotJob.getChildren()) {
+                    Job job = (Job) postSnapshotJob.getValue(Job.class);
+                    DatabaseReference mDatabaseEmployer = FirebaseDatabase.getInstance().getReference("Employer/" + job.getEmployerID());
+                    mDatabaseEmployer.addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshotEmployer) {
+                            Employer employer = (Employer) dataSnapshotEmployer.getValue(Employer.class);
+
+                            job.setEmployer(employer);
+                            jobList.add(job);
+
+                            jobAdapter = new ListJobHomeAdapter(getContext(), jobList);
+                            LinearLayoutManager layout = new LinearLayoutManager(getContext());
+                            rView1.setLayoutManager(layout);
+                            rView1.setAdapter(jobAdapter);
+                        }
+
+                        @Override
+                        public void onCancelled(DatabaseError databaseError) {
+                        }
+                    });
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+            }
+        });
+
+
     }
 
-    private void showDialogSearch(){
+    private void showEmployerHome() {
+        rView2 = binding.recyclerViewEmployer;
+        employerList = new ArrayList<>();
+        DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("Employer");
+        mDatabase.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                employerList.removeAll(employerList);
+                for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
+                    Employer employer = (Employer) postSnapshot.getValue(Employer.class);
+                    employerList.add(employer);
+                }
+                employerAdapter = new ListEmployerHomeAdapter(getContext(), employerList);
+                LinearLayoutManager layout = new LinearLayoutManager(getContext());
+                layout.setOrientation(RecyclerView.HORIZONTAL);
+                rView2.setLayoutManager(layout);
+                rView2.setAdapter(employerAdapter);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+            }
+        });
+    }
+
+    private void showDialogSearch() {
         final Dialog dialog = new Dialog(getContext());
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(R.layout.dialog_search);
 
         Window window = dialog.getWindow();
-        if(window == null){
+        if (window == null) {
             return;
         }
-        window.setLayout(WindowManager.LayoutParams.MATCH_PARENT,WindowManager.LayoutParams.WRAP_CONTENT);
+        window.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT);
         window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         WindowManager.LayoutParams windowAttribute = window.getAttributes();
         windowAttribute.gravity = Gravity.TOP;

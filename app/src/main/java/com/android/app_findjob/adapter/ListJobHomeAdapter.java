@@ -1,6 +1,5 @@
 package com.android.app_findjob.adapter;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,21 +13,18 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.android.app_findjob.DetailJobActivity;
+import com.android.app_findjob.view.DetailJobActivity;
 import com.android.app_findjob.R;
-import com.android.app_findjob.databinding.ZListJobItemHomeBinding;
 import com.android.app_findjob.model.Job;
-import com.android.app_findjob.view.HomeActivity;
-import com.android.app_findjob.view.LoginActivity;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
-public class ListJobHomeAdaterr extends RecyclerView.Adapter<ListJobHomeAdaterr.ListJobHomeViewHolder> {
+public class ListJobHomeAdapter extends RecyclerView.Adapter<ListJobHomeAdapter.ListJobHomeViewHolder> {
     private Context mContext ;
     private ArrayList<Job> jobList ;
 
-    public ListJobHomeAdaterr(Context mContext ,ArrayList<Job> jobList) {
+    public ListJobHomeAdapter(Context mContext , ArrayList<Job> jobList) {
         this.mContext = mContext;
         this.jobList = jobList;
     }
@@ -55,7 +51,10 @@ public class ListJobHomeAdaterr extends RecyclerView.Adapter<ListJobHomeAdaterr.
         holder.layout.setOnClickListener(view ->{
             Intent i = new Intent(mContext, DetailJobActivity.class);
             Bundle mBundle  = new Bundle();
-            mBundle.putInt("ID",job.getId());
+            mBundle.putInt("IDJob",job.getId());
+            mBundle.putInt("IDEmployer",job.getEmployerID());
+            mBundle.putString("ImgEmployer",job.getEmployer().getImg());
+            mBundle.putString("NameEmployer",job.getEmployer().getName());
             i.putExtras(mBundle);
             mContext.startActivity(i);
         });

@@ -10,6 +10,7 @@ import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.Patterns;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.android.app_findjob.databinding.ActivityLoginBinding;
@@ -27,7 +28,8 @@ public class LoginActivity extends AppCompatActivity {
         init();
 
         binding.txtLinkSignup.setOnClickListener(view -> {
-            Intent i = new Intent(LoginActivity.this, RegisterActivity.class);
+            RegisterActivity r = new RegisterActivity();
+            Intent i = new Intent(LoginActivity.this, r.getClass());
             startActivity(i);
         });
         binding.txtForgotPass.setOnClickListener(view -> {

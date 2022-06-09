@@ -1,30 +1,12 @@
 package com.android.app_findjob.model;
 
-import java.io.Serializable;
-
-public class Job implements Serializable {
-    private int id = 0;
-    private String name,skill,salary,address,city,vacancies,time,describe,request = "";
+public class Job  {
+    private int id , employerID = 0;
+    private String name,skill,salary,address,city,vacancies,time = "";
+    private describe describe ;
+    private request request ;
     private Employer employer ;
 
-    public Job() {}
-
-    public Job(int id, String name, String skill, String salary, String city, Employer employer) {
-        this.id = id;
-        this.name = name;
-        this.skill = skill;
-        this.salary = salary;
-        this.city = city;
-        this.employer = employer;
-    }
-
-    public Employer getEmployer() {
-        return employer;
-    }
-
-    public void setEmployer(Employer employer) {
-        this.employer = employer;
-    }
 
     public int getId() {
         return id;
@@ -32,6 +14,14 @@ public class Job implements Serializable {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public int getEmployerID() {
+        return employerID;
+    }
+
+    public void setEmployerID(int employerID) {
+        this.employerID = employerID;
     }
 
     public String getName() {
@@ -90,19 +80,45 @@ public class Job implements Serializable {
         this.time = time;
     }
 
-    public String getDescribe() {
+    public com.android.app_findjob.model.describe getDescribe() {
         return describe;
     }
 
-    public void setDescribe(String describe) {
+    public void setDescribe(com.android.app_findjob.model.describe describe) {
         this.describe = describe;
     }
 
-    public String getRequest() {
+    public com.android.app_findjob.model.request getRequest() {
         return request;
     }
 
-    public void setRequest(String request) {
+    public void setRequest(com.android.app_findjob.model.request request) {
         this.request = request;
+    }
+
+    public Employer getEmployer() {
+        return employer;
+    }
+
+    public void setEmployer(Employer employer) {
+        this.employer = employer;
+    }
+
+    @Override
+    public String toString() {
+        return "Job{" +
+                "id=" + id +
+                ", employerID=" + employerID +
+                ", name='" + name + '\'' +
+                ", skill='" + skill + '\'' +
+                ", salary='" + salary + '\'' +
+                ", address='" + address + '\'' +
+                ", city='" + city + '\'' +
+                ", vacancies='" + vacancies + '\'' +
+                ", time='" + time + '\'' +
+                ", describe=" + describe +
+                ", request=" + request +
+                ", employer=" + employer +
+                '}';
     }
 }

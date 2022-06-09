@@ -2,12 +2,6 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <data>
-        <variable
-            name="Notification"
-            type="com.android.app_findjob.model.Notification" />
-    </data>
-
     <RelativeLayout
         android:background="@color/bgr_pager"
         android:layout_width="match_parent"
@@ -15,7 +9,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="130dp"
+            android:layout_height="115dp"
             android:layout_marginTop="-10dp"
             android:layout_marginBottom="-10dp">
 
@@ -48,18 +42,17 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="sans-serif-condensed-medium"
-                            android:paddingTop="2dp"
-                            android:paddingBottom="5dp"
-                            android:text="@={Notification.title}"
+                            android:paddingBottom="2dp"
+                            android:text="Employers have approved your CV"
                             android:textSize="18sp" />
 
                         <TextView
                             android:id="@+id/txt_detail"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="32dp"
                             android:fontFamily="sans-serif-condensed"
                             android:paddingBottom="3dp"
-                            android:text="@={Notification.detail}"
+                            android:text="Fresher Software Engineer are already in store. Do you like this job ? Let's add to your "
                             android:textColor="@color/cannon_pink"
                             android:textSize="12sp" />
 
@@ -67,8 +60,9 @@
                             android:id="@+id/txt_time"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
                             android:fontFamily="sans-serif-condensed"
-                            android:text="@={Notification.time}"
+                            android:text="12:00 4/6/2022"
                             android:textColor="@color/cannon_pink"
                             android:textSize="12sp" />
 
@@ -91,8 +85,8 @@
 
             <ImageButton
                 android:id="@+id/btn_status"
-                android:layout_width="10dp"
-                android:layout_height="10dp"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
                 android:layout_marginEnd="38dp"
