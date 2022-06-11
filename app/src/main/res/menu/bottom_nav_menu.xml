@@ -8,12 +8,12 @@
 
     <item
         android:id="@+id/navigation_job"
-        android:icon="@drawable/ic_launcher_gardening"
+        android:icon="@drawable/ic_launcher_job"
         android:title="Job" />
 
     <item
         android:id="@+id/navigation_blog"
-        android:icon="@drawable/ic_launcher_notification"
+        android:icon="@drawable/ic_launcher_blog"
         android:title="Blog" />
 
     <item

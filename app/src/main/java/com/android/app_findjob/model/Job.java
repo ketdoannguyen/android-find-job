@@ -7,6 +7,8 @@ public class Job  {
     private request request ;
     private Employer employer ;
 
+    private String status,timeApply = "" ;
+
 
     public int getId() {
         return id;
@@ -102,6 +104,22 @@ public class Job  {
 
     public void setEmployer(Employer employer) {
         this.employer = employer;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getTimeApply() {
+        return timeApply;
+    }
+
+    public void setTimeApply(String timeApply) {
+        this.timeApply = timeApply;
     }
 
     @Override

@@ -2,7 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/menuDetail"
-        android:icon="@drawable/ic_launcher_gardening"
+        android:icon="@drawable/btndetail"
         android:title="See details"
          />
     <item
@@ -11,7 +11,7 @@
         android:title="Mark as read"
         />
     <item
-            android:id="@+id/menuDelete"
+        android:id="@+id/menuDelete"
         android:icon="@drawable/btndelete"
         android:title="Delete"
          />

@@ -71,7 +71,7 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView"
                 android:layout_width="380dp"
-                android:layout_height="100dp"
+                android:layout_height="80dp"
                 android:layout_marginTop="-20dp"
                 app:cardCornerRadius="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -90,7 +90,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="5dp"
-                        android:text="$200"
+                        android:text="1200"
                         android:textColor="@color/pink_old"
                         android:textSize="20sp" />
 
@@ -99,7 +99,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="5dp"
-                        android:text="BALANCE"
+                        android:text="STAR"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -122,7 +122,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="5dp"
-                        android:text="10"
+                        android:text="97%"
                         android:textColor="@color/pink_old"
                         android:textSize="20sp" />
 
@@ -131,7 +131,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="5dp"
-                        android:text="VOUCHER"
+                        android:text="RELIABILITY"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -155,7 +155,7 @@
 
 
                 <TextView
-                    android:id="@+id/txt_name"
+                    android:id="@+id/btnUpdateProfile"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:background="@drawable/shape_arrow"
@@ -165,7 +165,7 @@
                     android:letterSpacing="0.06"
                     android:gravity="left|center"
                     android:drawablePadding="20dp"
-                    android:text="Cập nhật hồ sơ"
+                    android:text="Update profile"
                     android:textSize="18sp" />
 
 
@@ -181,7 +181,7 @@
                     android:letterSpacing="0.06"
                     android:gravity="left|center"
                     android:drawablePadding="20dp"
-                    android:text="Tải lên CV"
+                    android:text="Upload CV"
                     android:textSize="18sp" />
 
                 <TextView
@@ -196,7 +196,7 @@
                     android:letterSpacing="0.06"
                     android:gravity="left|center"
                     android:drawablePadding="20dp"
-                    android:text="Robot công việc"
+                    android:text="My job Robot"
                     android:textSize="18sp" />
                 <TextView
                     android:id="@+id/btnJobSave"
@@ -210,7 +210,7 @@
                     android:letterSpacing="0.06"
                     android:gravity="left|center"
                     android:drawablePadding="20dp"
-                    android:text="Công việc đang theo dỏi"
+                    android:text="Jobs are following"
                     android:textSize="18sp" />
                 <TextView
                     android:id="@+id/btnEmployer"
@@ -224,7 +224,7 @@
                     android:letterSpacing="0.06"
                     android:gravity="left|center"
                     android:drawablePadding="20dp"
-                    android:text="Nhà tuyển dụng"
+                    android:text="Employers are following"
                     android:textSize="18sp" />
                 <TextView
                     android:id="@+id/btnLogOut"
@@ -238,7 +238,7 @@
                     android:letterSpacing="0.06"
                     android:gravity="left|center"
                     android:drawablePadding="20dp"
-                    android:text="Đăng suất"
+                    android:text="Log out"
                     android:textSize="18sp" />
             </LinearLayout>
 

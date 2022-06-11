@@ -1,7 +1,6 @@
 package com.android.app_findjob.view;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.app.Dialog;
 import android.content.Intent;
@@ -9,21 +8,15 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.Gravity;
-import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.app_findjob.R;
-import com.android.app_findjob.adapter.ListJobHomeAdapter;
 import com.android.app_findjob.databinding.ActivityDetailJobBinding;
-import com.android.app_findjob.databinding.ActivityLoginBinding;
-import com.android.app_findjob.model.Employer;
-import com.android.app_findjob.model.EmployerFollow;
 import com.android.app_findjob.model.Job;
-import com.android.app_findjob.model.JobFollow;
+import com.android.app_findjob.model.JobActive;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -37,7 +30,7 @@ import java.util.ArrayList;
 
 public class DetailJobActivity extends AppCompatActivity {
     private ActivityDetailJobBinding binding ;
-    private ArrayList<JobFollow> list;
+    private ArrayList<JobActive> list;
     private int idJobIntent;
     private boolean checkHeart = false;
     @Override
@@ -100,34 +93,34 @@ public class DetailJobActivity extends AppCompatActivity {
             if (!checkHeart) {
                 binding.btnHeart.setImageResource(R.drawable.heart1);
                 checkHeart = true;
-                JobFollow mJobFollow = new JobFollow();
+                JobActive mJobActive = new JobActive();
                 Boolean check = false ;
-                for (JobFollow e : list) {
+                for (JobActive e : list) {
                     if (e.getJobID() == idJobIntent) {
-                        mJobFollow.setId(e.getId());
+                        mJobActive.setId(e.getId());
                         check = true ;
                     }
                 }
                 if(!check){
                     if (list.size() == 0) {
-                        mJobFollow.setId(0);
+                        mJobActive.setId(0);
                     } else {
-                        mJobFollow.setId(list.get(list.size() - 1).getId() + 1);
+                        mJobActive.setId(list.get(list.size() - 1).getId() + 1);
                     }
                 }
-                mJobFollow.setJobID(idJobIntent);
-                mDatabaseFollow.child(mJobFollow.getId() + "").setValue(mJobFollow);
-                list.add(mJobFollow);
+                mJobActive.setJobID(idJobIntent);
+                mDatabaseFollow.child(mJobActive.getId() + "").setValue(mJobActive);
+                list.add(mJobActive);
                 Toast.makeText(this,"Đã thêm công việc này vào mục yêu thích",Toast.LENGTH_SHORT).show();
                 return;
             } else {
                 binding.btnHeart.setImageResource(R.drawable.heart);
                 checkHeart = false;
                 Toast.makeText(this,"Đã xóa công việc này khỏi mục yêu thích",Toast.LENGTH_SHORT).show();
-                for (JobFollow jobFollow : list) {
-                    if (jobFollow.getJobID() == idJobIntent) {
-                        mDatabaseFollow.child(jobFollow.getId()+"").removeValue();
-                        list.remove(jobFollow);
+                for (JobActive jobActive : list) {
+                    if (jobActive.getJobID() == idJobIntent) {
+                        mDatabaseFollow.child(jobActive.getId()+"").removeValue();
+                        list.remove(jobActive);
                         return;
                     }
                 }
@@ -146,12 +139,12 @@ public class DetailJobActivity extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
-                    JobFollow jobFollow = (JobFollow) postSnapshot.getValue(JobFollow.class);
-                    if (jobFollow.getJobID() == idJobIntent) {
+                    JobActive jobActive = (JobActive) postSnapshot.getValue(JobActive.class);
+                    if (jobActive.getJobID() == idJobIntent) {
                         binding.btnHeart.setImageResource(R.drawable.heart1);
                         checkHeart = true;
                     }
-                    list.add(jobFollow);
+                    list.add(jobActive);
                 }
             }
 

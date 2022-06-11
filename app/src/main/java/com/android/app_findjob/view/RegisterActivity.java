@@ -80,7 +80,7 @@ public class RegisterActivity extends AppCompatActivity {
 
                             // add user to realtime database
                             DatabaseReference realtimeDatabase = FirebaseDatabase.getInstance().getReference("User");
-                            User user = new User(mFirebaseUser.getUid().toString(),name,email,pass,"","");
+                            User user = new User(mFirebaseUser.getUid().toString(),name,email,pass);
                             realtimeDatabase.child(mFirebaseUser.getUid()).setValue(user);
 
                             Toast.makeText(RegisterActivity.this, "     Register succes!!\nPlease verify your email",Toast.LENGTH_LONG).show();

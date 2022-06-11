@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -59,6 +60,14 @@ public class ListJobHomeAdapter extends RecyclerView.Adapter<ListJobHomeAdapter.
             mContext.startActivity(i);
         });
 
+        if(job.getStatus() != null && !job.getStatus().equals("")){
+            holder.layoutApply.setVisibility(View.VISIBLE);
+            holder.txtStatus.setText(job.getStatus());
+            holder.txtTimeApply.setText(job.getTimeApply());
+        }else{
+            holder.layoutApply.setVisibility(View.GONE);
+        }
+
     }
 
 
@@ -68,9 +77,10 @@ public class ListJobHomeAdapter extends RecyclerView.Adapter<ListJobHomeAdapter.
     }
 
     class ListJobHomeViewHolder extends RecyclerView.ViewHolder {
-        private TextView txtName,txtSalary,txtSkill,txtCity;
+        private TextView txtName,txtSalary,txtSkill,txtCity,txtStatus,txtTimeApply;
         private ImageView img ;
         private RelativeLayout layout ;
+        private LinearLayout layoutApply ;
         public ListJobHomeViewHolder(@NonNull View v) {
             super(v);
             layout = v.findViewById(R.id.lyViewListPink);
@@ -79,6 +89,9 @@ public class ListJobHomeAdapter extends RecyclerView.Adapter<ListJobHomeAdapter.
             txtSalary = v.findViewById(R.id.txtSalaryJob);
             txtSkill = v.findViewById(R.id.txtSkillJob);
             txtCity = v.findViewById(R.id.txtCityJob);
+            layoutApply = v.findViewById(R.id.layoutApply);
+            txtStatus = v.findViewById(R.id.txtStatus);
+            txtTimeApply= v.findViewById(R.id.txtTimeApply);
         }
 
     }

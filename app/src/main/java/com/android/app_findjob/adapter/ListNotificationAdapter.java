@@ -3,6 +3,7 @@ package com.android.app_findjob.adapter;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -26,6 +27,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
 
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 
 public class ListNotificationAdapter extends RecyclerView.Adapter<ListNotificationAdapter.ListNotificationViewHolder> {
@@ -83,13 +86,27 @@ public class ListNotificationAdapter extends RecyclerView.Adapter<ListNotificati
             btnStatus = v.findViewById(R.id.btn_status);
         }
         private void showMenu(View v,Notification notification){
-            PopupMenu popup = new PopupMenu(mContext,v);
-            popup.inflate(R.menu.show_menu_notification);
+            PopupMenu popup = new PopupMenu(mContext,v, Gravity.RIGHT);
 
-            Menu menu = popup.getMenu();
             // com.android.internal.view.menu.MenuBuilder
 
             // Register Menu Item Click event.
+            try {
+                Field[] fields = popup.getClass().getDeclaredFields();
+                for (Field field : fields) {
+                    if ("mPopup".equals(field.getName())) {
+                        field.setAccessible(true);
+                        Object menuPopupHelper = field.get(popup);
+                        Class<?> classPopupHelper = Class.forName(menuPopupHelper.getClass().getName());
+                        Method setForceIcons = classPopupHelper.getMethod("setForceShowIcon",boolean.class);
+                        setForceIcons.invoke(menuPopupHelper, true);
+                        break;
+                    }
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            popup.getMenuInflater().inflate(R.menu.show_menu_notification, popup.getMenu());
             popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                 @Override
                 public boolean onMenuItemClick(MenuItem item) {

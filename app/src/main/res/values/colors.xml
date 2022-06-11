@@ -11,6 +11,11 @@
     <color name="light_grey">#E8F6F6F6</color>
 
     <!-- custom colors -->
+
+    <color name="color_text">#444444</color>
+    <color name="color_job1">#FF6600</color>
+    <color name="color_job2">#666666</color>
+    <color name="color_line">#C0C0C0</color>
     <color name="bgr_pager">#fcfaf2</color>
     <color name="color_hint">#FDB499</color>
     <color name="color_note">#FF5E5E</color>

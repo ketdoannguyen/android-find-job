@@ -37,7 +37,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 
 public class NotificationsFragment extends Fragment {
@@ -55,11 +57,8 @@ public class NotificationsFragment extends Fragment {
         binding = FragmentNotificationsBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
         binding.imgMenu.setOnClickListener(view -> {
-            try {
-                MainMenu(view);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+            MainMenu(view);
+
         });
 
         showNotification();
@@ -97,11 +96,27 @@ public class NotificationsFragment extends Fragment {
     }
 
 
-    private void MainMenu(View v) throws Exception {
+    private void MainMenu(View v)  {
         PopupMenu popup = new PopupMenu(getContext(),v, Gravity.RIGHT);
-        popup.inflate(R.menu.main_menu_notification);
-
-        Menu menu = popup.getMenu();
+//        popup.inflate(R.menu.main_menu_notification);
+//
+//        Menu menu = popup.getMenu();
+        try {
+            Field[] fields = popup.getClass().getDeclaredFields();
+            for (Field field : fields) {
+                if ("mPopup".equals(field.getName())) {
+                    field.setAccessible(true);
+                    Object menuPopupHelper = field.get(popup);
+                    Class<?> classPopupHelper = Class.forName(menuPopupHelper.getClass().getName());
+                    Method setForceIcons = classPopupHelper.getMethod("setForceShowIcon",boolean.class);
+                    setForceIcons.invoke(menuPopupHelper, true);
+                    break;
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        popup.getMenuInflater().inflate(R.menu.main_menu_notification, popup.getMenu());
 
         // com.android.internal.view.menu.MenuBuilder
         // Register Menu Item Click event.
@@ -116,7 +131,22 @@ public class NotificationsFragment extends Fragment {
     private boolean menuItemClicked(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.menuRead:
-                Toast.makeText(getContext(), "Read", Toast.LENGTH_SHORT).show();
+                DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("Notifications");
+                mDatabase.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
+                            Notification notification  = (Notification) postSnapshot.getValue(Notification .class);
+                            notification.setStatus("read");
+                            mDatabase.child(notification.getId()+"").setValue(notification);
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+                    }
+                });
+                Toast.makeText(getContext(),"Mark read all success",Toast.LENGTH_SHORT).show();
                 break;
             case R.id.menuSetting:
                 Toast.makeText(getContext(), "Setting", Toast.LENGTH_SHORT).show();
