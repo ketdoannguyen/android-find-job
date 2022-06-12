@@ -15,6 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -59,7 +60,9 @@ import java.util.ArrayList;
 import java.util.Calendar;
 
 public class BlogFragment extends Fragment {
-
+    ArrayList<String> arrayList, arrayLink,arrayImage,arrayAuthor;
+    ArrayAdapter adapter;
+    RecyclerView rv ;
     private FragmentBlogBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -76,7 +79,10 @@ public class BlogFragment extends Fragment {
         super.onDestroyView();
         binding = null;
     }
+    public void showBlog()
+    {
 
+    }
 
 
 }

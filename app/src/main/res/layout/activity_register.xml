@@ -76,8 +76,8 @@
                 android:drawablePadding="10dp"
                 android:hint="@string/user"
                 android:inputType="textPersonName"
-                android:textColor="@color/txtActionBar"
                 android:padding="15dp"
+                android:textColor="@color/txtActionBar"
                 android:textSize="20sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -110,8 +110,8 @@
                 android:drawablePadding="10dp"
                 android:hint="@string/email"
                 android:inputType="textEmailAddress"
-                android:textColor="@color/txtActionBar"
                 android:padding="15dp"
+                android:textColor="@color/txtActionBar"
                 android:textSize="20sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -145,8 +145,8 @@
                 android:drawablePadding="10dp"
                 android:hint="@string/pass"
                 android:inputType="textPassword"
-                android:textColor="@color/txtActionBar"
                 android:padding="15dp"
+                android:textColor="@color/txtActionBar"
                 android:textSize="20sp" />
 
         </com.google.android.material.textfield.TextInputLayout>
