@@ -67,6 +67,7 @@ public class ReadRSS extends AsyncTask<String, Void, String>
         for (int i = 0; i < nodeList.getLength(); i++) {
             Element element = (Element) nodeList.item(i);
             tieuDe = Parser.getValue(element, "title");
+
             context.arrayTitle.add(tieuDe);
             context.arrayLink.add(Parser.getValue(element,"link"));
             context.listView.setAdapter(context.adapter);
