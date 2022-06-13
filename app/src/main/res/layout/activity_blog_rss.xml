@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color_bgblog"
     tools:context=".Rss.Blog_RSS">
-    <LinearLayout
+
+    <RelativeLayout
         android:id="@+id/linearLayout"
-        android:layout_width="412dp"
-        android:layout_height="126dp"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
         android:background="@color/c3"
-        android:gravity="center"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:paddingStart="10dp">
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="113dp"
-            android:layout_height="99dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="15dp"
             android:src="@drawable/icon_blog" />
 
         <TextView
             android:id="@+id/textView2"
-            android:layout_width="283dp"
-            android:layout_height="42dp"
-            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="40dp"
             android:fontFamily="casual"
             android:paddingStart="20dp"
             android:paddingEnd="20dp"
@@ -36,24 +36,64 @@
             android:textSize="25sp"
             android:textStyle="bold"
             android:transitionName="logo_txt" />
-    </LinearLayout>
+    </RelativeLayout>
+    <TextView
+        android:layout_width="283dp"
+        android:layout_height="42dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="monospace"
+        android:text="Mới cập nhật"
+        android:textColor="@color/text"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <View
+            android:layout_width="60dp"
+            android:layout_height="4dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="20dp"
+            android:background="@color/color_yellow" />
+    </TableRow>
 
 
 
 
-    <ListView
-        android:id="@+id/lv_RSS"
-        android:layout_width="403dp"
-        android:layout_height="594dp"
-        android:layout_alignParentBottom="true"
+<!--    <ListView-->
+<!--        android:id="@+id/lv_RSS"-->
+<!--        android:layout_width="403dp"-->
+<!--        android:layout_height="594dp"-->
+<!--        android:layout_alignParentBottom="true"-->
 
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/linearLayout">-->
 
-    </ListView>
+<!--    </ListView>-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:scrollbars="none">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listBlog"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:paddingBottom="150dp"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            tools:itemCount="1"
+            tools:listitem="@layout/z_list_blog_item" />
+    </ScrollView>
 
 
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

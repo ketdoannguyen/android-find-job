@@ -72,8 +72,14 @@ public class ProfileFragment extends Fragment {
             getFragmentManager().beginTransaction().replace(R.id.nav_profile, mFragment).commit();
         });
 
+        FirebaseUser mFirebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+        binding.tvNameAccount.setText(mFirebaseUser.getDisplayName());
+        binding.tvEmail.setText(mFirebaseUser.getEmail());
         binding.btnUpdateProfile.setOnClickListener(view -> {
             showDialogUpdateProfile();
+        });
+        binding.btnLogOut.setOnClickListener(view -> {
+            FirebaseAuth.getInstance().signOut();
         });
 
         return root;

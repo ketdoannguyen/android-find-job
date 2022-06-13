@@ -14,6 +14,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.android.app_findjob.model.Blog;
 import com.android.app_findjob.view.DetailJobActivity;
 import com.android.app_findjob.R;
 import com.android.app_findjob.model.Job;
@@ -29,6 +30,7 @@ public class ListJobHomeAdapter extends RecyclerView.Adapter<ListJobHomeAdapter.
         this.mContext = mContext;
         this.jobList = jobList;
     }
+
 
     @NonNull
     @Override

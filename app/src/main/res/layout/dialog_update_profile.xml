@@ -272,7 +272,7 @@
             android:layout_height="50dp"
             android:layout_margin="20dp"
             android:background="@drawable/shape_applyjob"
-            android:letterSpacing="0.15"
+            android:letterSpacing="0.1"
             android:text="UPDATE PROFILE" />
 
     </LinearLayout>

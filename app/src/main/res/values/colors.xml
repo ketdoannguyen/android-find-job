@@ -12,6 +12,9 @@
 
     <!-- custom colors -->
 
+    <color name="color_bgblog">#F5F5F5</color>
+    <color name="color_yellow">#FF9900</color>
+    <color name="color_text_blog">#990000</color>
     <color name="color_text">#444444</color>
     <color name="color_job1">#FF6600</color>
     <color name="color_job2">#666666</color>
@@ -32,7 +35,7 @@
     <color name="transparent">#6FFEF8F1</color>
     <color name="c1">#ffe5d9</color>
     <color name="c2">#ffd7ba</color>
-    <color name="c3">#fec89a</color>
+    <color name="c3">#FAEBD7</color>
     <color name="light_pink">#f8dbd3</color>
     <color name="pink">#fcc0c5</color>
     <color name="pink_nude">#e6bec1</color>

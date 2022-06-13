@@ -21,6 +21,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserProfileChangeRequest;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -68,7 +69,7 @@ public class RegisterActivity extends AppCompatActivity {
             sendDataAuth(name , email, pass);
         }
     }
-    private void sendDataAuth(String name , String email , String pass){
+    private void sendDataAuth(String nameAccount , String email , String pass){
         FirebaseAuth auth = FirebaseAuth.getInstance();
         auth.createUserWithEmailAndPassword(email, pass)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -76,11 +77,16 @@ public class RegisterActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             FirebaseUser mFirebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+                            mFirebaseUser.updateProfile(
+                                    new UserProfileChangeRequest.Builder()
+                                            .setDisplayName(nameAccount)
+                                            .build()
+                            );
                             mFirebaseUser.sendEmailVerification();
 
                             // add user to realtime database
                             DatabaseReference realtimeDatabase = FirebaseDatabase.getInstance().getReference("User");
-                            User user = new User(mFirebaseUser.getUid().toString(),name,email,pass);
+                            User user = new User(mFirebaseUser.getUid().toString(),nameAccount,email,pass);
                             realtimeDatabase.child(mFirebaseUser.getUid()).setValue(user);
 
                             Toast.makeText(RegisterActivity.this, "     Register succes!!\nPlease verify your email",Toast.LENGTH_LONG).show();
