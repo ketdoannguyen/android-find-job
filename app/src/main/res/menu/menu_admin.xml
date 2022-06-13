@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home_admin"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="Home" />
+    <item
+        android:id="@+id/nav_quanLyMA"
+        android:icon="@drawable/img_12"
+        android:title="Manage Jobs" />
+    <item
+        android:id="@+id/nav_quanLyDH"
+        android:icon="@drawable/img_17"
+        android:title="List Company" />
+    <item
+        android:id="@+id/nav_thongKe"
+        android:icon="@drawable/img_11"
+        android:title="Manage Blog" />
+    <item
+        android:id="@+id/nav_Profile"
+        android:icon="@drawable/ic_person"
+        android:title="Storage Profile" />
+    <item
+        android:id="@+id/nav_DangXuat_admin"
+        android:icon="@drawable/ic_person"
+        android:title="Logout" />
+
+</menu>
