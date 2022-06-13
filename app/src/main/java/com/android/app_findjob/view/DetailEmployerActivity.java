@@ -1,14 +1,20 @@
 package com.android.app_findjob.view;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import com.android.app_findjob.adapter.ListJobHomeAdapter;
 import com.android.app_findjob.databinding.ActivityDetailEmployerBinding;
 import com.android.app_findjob.model.Employer;
 import com.android.app_findjob.model.EmployerFollow;
 import com.android.app_findjob.model.Job;
+import com.android.app_findjob.model.JobActive;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -27,6 +33,10 @@ public class DetailEmployerActivity extends AppCompatActivity {
     private  DatabaseReference mDatabaseFollow ;
     private boolean checkEmployer = false;
 
+    private RecyclerView rView;
+    private ArrayList<Job> jobList;
+    private ListJobHomeAdapter jobAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +48,7 @@ public class DetailEmployerActivity extends AppCompatActivity {
         FirebaseUser userAuth = FirebaseAuth.getInstance().getCurrentUser();
         DatabaseReference mDatabaseFollow = FirebaseDatabase.getInstance().getReference("UserActivity").child(userAuth.getUid()).child("EmployerFollow");
         getListDataFirebase(userAuth.getUid());
+        showJobHome();
         binding.btnBack.setOnClickListener(view -> {
             startActivity(new Intent(this, HomeActivity.class));
         });
@@ -96,6 +107,9 @@ public class DetailEmployerActivity extends AppCompatActivity {
                 binding.txtFollerEmployer.setText(employer.getFollower() + "");
                 binding.txtWebsiteEmployer.setText(employer.getWebsite());
 
+                binding.txtdes1.setText(employer.getDescribe().getDes1());
+                binding.txtdes2.setText(employer.getDescribe().getDes2());
+
 
             }
 
@@ -124,6 +138,44 @@ public class DetailEmployerActivity extends AppCompatActivity {
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
+            }
+        });
+    }
+    private void showJobHome() {
+        rView = binding.listJob;
+        jobList = new ArrayList<>();
+        DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("Job");
+        mDatabase.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshotJob) {
+                for(DataSnapshot postSnapshotJob : dataSnapshotJob.getChildren()){
+                    Job job = (Job) postSnapshotJob.getValue(Job.class);
+                    if(job.getEmployerID() == idEmployerIntent) {
+                        DatabaseReference mDatabaseEmployer = FirebaseDatabase.getInstance().getReference("Employer/" + job.getEmployerID());
+                        mDatabaseEmployer.addValueEventListener(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(DataSnapshot dataSnapshotEmployer) {
+                                Employer employer = (Employer) dataSnapshotEmployer.getValue(Employer.class);
+                                job.setEmployer(employer);
+                                jobList.add(job);
+                                jobAdapter = new ListJobHomeAdapter(DetailEmployerActivity.this, jobList);
+                                LinearLayoutManager layout = new LinearLayoutManager(DetailEmployerActivity.this);
+                                rView.setLayoutManager(layout);
+                                rView.setAdapter(jobAdapter);
+                            }
+
+
+                            @Override
+                            public void onCancelled(DatabaseError databaseError) {
+                            }
+                        });
+                    }
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
             }
         });
     }

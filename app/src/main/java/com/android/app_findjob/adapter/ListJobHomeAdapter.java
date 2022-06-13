@@ -1,11 +1,19 @@
 package com.android.app_findjob.adapter;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -18,6 +26,8 @@ import com.android.app_findjob.model.Blog;
 import com.android.app_findjob.view.DetailJobActivity;
 import com.android.app_findjob.R;
 import com.android.app_findjob.model.Job;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -51,6 +61,8 @@ public class ListJobHomeAdapter extends RecyclerView.Adapter<ListJobHomeAdapter.
         holder.txtSkill.setText(job.getSkill());
         holder.txtCity.setText(job.getCity());
 
+
+
         holder.layout.setOnClickListener(view ->{
             Intent i = new Intent(mContext, DetailJobActivity.class);
             Bundle mBundle  = new Bundle();
@@ -60,6 +72,7 @@ public class ListJobHomeAdapter extends RecyclerView.Adapter<ListJobHomeAdapter.
             mBundle.putString("NameEmployer",job.getEmployer().getName());
             i.putExtras(mBundle);
             mContext.startActivity(i);
+
         });
 
         if(job.getStatus() != null && !job.getStatus().equals("")){
@@ -80,6 +93,7 @@ public class ListJobHomeAdapter extends RecyclerView.Adapter<ListJobHomeAdapter.
 
     class ListJobHomeViewHolder extends RecyclerView.ViewHolder {
         private TextView txtName,txtSalary,txtSkill,txtCity,txtStatus,txtTimeApply;
+
         private ImageView img ;
         private RelativeLayout layout ;
         private LinearLayout layoutApply ;
@@ -94,6 +108,7 @@ public class ListJobHomeAdapter extends RecyclerView.Adapter<ListJobHomeAdapter.
             layoutApply = v.findViewById(R.id.layoutApply);
             txtStatus = v.findViewById(R.id.txtStatus);
             txtTimeApply= v.findViewById(R.id.txtTimeApply);
+
         }
 
     }

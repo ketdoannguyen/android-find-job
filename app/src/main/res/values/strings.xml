@@ -47,6 +47,7 @@
     <string name="facebook_client_token">56789</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="title_activity_maps">MapsActivity</string>
 
 
 </resources>

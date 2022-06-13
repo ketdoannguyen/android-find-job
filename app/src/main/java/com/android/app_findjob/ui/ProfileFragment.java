@@ -3,6 +3,7 @@ package com.android.app_findjob.ui;
 import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
@@ -43,6 +44,7 @@ import com.android.app_findjob.model.Job;
 import com.android.app_findjob.model.Notification;
 import com.android.app_findjob.model.User;
 import com.android.app_findjob.ui.notifications.NotificationsViewModel;
+import com.android.app_findjob.view.LoginActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -71,6 +73,14 @@ public class ProfileFragment extends Fragment {
             Fragment mFragment = new JobFragment();
             getFragmentManager().beginTransaction().replace(R.id.nav_profile, mFragment).commit();
         });
+        binding.linkSetting.setOnClickListener(view -> {
+            Fragment mFragment = new SettingFragment();
+            getFragmentManager().beginTransaction().replace(R.id.nav_profile, mFragment).commit();
+        });
+        binding.btnEmployer.setOnClickListener(view -> {
+            Fragment mFragment = new EmployerFollowFragment();
+            getFragmentManager().beginTransaction().replace(R.id.nav_profile, mFragment).commit();
+        });
 
         FirebaseUser mFirebaseUser = FirebaseAuth.getInstance().getCurrentUser();
         binding.tvNameAccount.setText(mFirebaseUser.getDisplayName());
@@ -80,6 +90,8 @@ public class ProfileFragment extends Fragment {
         });
         binding.btnLogOut.setOnClickListener(view -> {
             FirebaseAuth.getInstance().signOut();
+            startActivity(new Intent(getContext(), LoginActivity.class));
+            Toast.makeText(getContext(),"Log out succes",Toast.LENGTH_SHORT).show();
         });
 
         return root;

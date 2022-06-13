@@ -2,14 +2,14 @@ package com.android.app_findjob.model;
 
 
 public class describe  {
-    String des0,des1,des2= "";
+    String des3,des1,des2= "";
 
-    public String getDes0() {
-        return des0;
+    public String getDes3() {
+        return des3;
     }
 
-    public void setDes0(String des0) {
-        this.des0 = des0;
+    public void setDes3(String des0) {
+        this.des3 = des0;
     }
 
     public String getDes1() {
