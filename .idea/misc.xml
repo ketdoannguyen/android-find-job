@@ -23,6 +23,7 @@
         <entry key="..\:/Users/Duc/Desktop/App_FindJob/app/src/main/res/drawable-ldpi/ic_baseline_home_24.xml" value="0.1" />
         <entry key="..\:/Users/Duc/Desktop/App_FindJob/app/src/main/res/drawable-ldpi/ic_person.xml" value="0.207" />
         <entry key="..\:/Users/Duc/Desktop/App_FindJob/app/src/main/res/drawable-ldpi/side_nav_bar_admin.xml" value="0.1" />
+        <entry key="..\:/Users/Duc/Desktop/App_FindJob/app/src/main/res/drawable/btn_bg.xml" value="0.207" />
         <entry key="..\:/Users/Duc/Desktop/App_FindJob/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.12" />
         <entry key="..\:/Users/Duc/Desktop/App_FindJob/app/src/main/res/drawable/ic_launcher_gardening.xml" value="0.2265" />
         <entry key="..\:/Users/Duc/Desktop/App_FindJob/app/src/main/res/drawable/ic_launcher_home.xml" value="0.2265" />
@@ -36,6 +37,8 @@
         <entry key="..\:/Users/Duc/Desktop/App_FindJob/app/src/main/res/layout/activity_home.xml" value="0.25" />
         <entry key="..\:/Users/Duc/Desktop/App_FindJob/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/Users/Duc/Desktop/App_FindJob/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/Duc/Desktop/App_FindJob/app/src/main/res/layout/activity_main_admin.xml" value="0.25" />
+        <entry key="..\:/Users/Duc/Desktop/App_FindJob/app/src/main/res/layout/activity_manage_job.xml" value="0.21784420289855072" />
         <entry key="..\:/Users/Duc/Desktop/App_FindJob/app/src/main/res/layout/activity_register.xml" value="0.25" />
         <entry key="..\:/Users/Duc/Desktop/App_FindJob/app/src/main/res/layout/activity_web_blog.xml" value="0.21784420289855072" />
         <entry key="..\:/Users/Duc/Desktop/App_FindJob/app/src/main/res/layout/activity_zlist_item_blog.xml" value="0.16104868913857678" />
@@ -47,7 +50,7 @@
         <entry key="..\:/Users/Duc/Desktop/App_FindJob/app/src/main/res/layout/fragment_job.xml" value="0.25" />
         <entry key="..\:/Users/Duc/Desktop/App_FindJob/app/src/main/res/layout/fragment_notifications.xml" value="0.25" />
         <entry key="..\:/Users/Duc/Desktop/App_FindJob/app/src/main/res/layout/fragment_profile.xml" value="0.19427083333333334" />
-        <entry key="..\:/Users/Duc/Desktop/App_FindJob/app/src/main/res/layout/nav_header_main_admin.xml" value="0.1" />
+        <entry key="..\:/Users/Duc/Desktop/App_FindJob/app/src/main/res/layout/nav_header_main_admin.xml" value="0.264" />
         <entry key="..\:/Users/Duc/Desktop/App_FindJob/app/src/main/res/layout/z_list_employer_item_home.xml" value="0.19427083333333334" />
         <entry key="..\:/Users/Duc/Desktop/App_FindJob/app/src/main/res/layout/z_list_job_item_home.xml" value="0.25" />
         <entry key="..\:/Users/Duc/Desktop/App_FindJob/app/src/main/res/layout/z_list_notification.xml" value="0.264" />
