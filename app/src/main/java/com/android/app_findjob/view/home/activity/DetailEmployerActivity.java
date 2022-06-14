@@ -1,4 +1,4 @@
-package com.android.app_findjob.view;
+package com.android.app_findjob.view.home.activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.WindowManager;
 import android.widget.Toast;
 
 import com.android.app_findjob.adapter.ListJobHomeAdapter;
@@ -14,7 +15,6 @@ import com.android.app_findjob.databinding.ActivityDetailEmployerBinding;
 import com.android.app_findjob.model.Employer;
 import com.android.app_findjob.model.EmployerFollow;
 import com.android.app_findjob.model.Job;
-import com.android.app_findjob.model.JobActive;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -42,6 +42,7 @@ public class DetailEmployerActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityDetailEmployerBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         Intent intent = getIntent();
         idEmployerIntent = intent.getIntExtra("IDEmployer", -1);

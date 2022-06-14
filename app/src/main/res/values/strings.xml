@@ -49,5 +49,8 @@
     <string name="title_notifications">Notifications</string>
     <string name="title_activity_maps">MapsActivity</string>
 
+    <string name="navigation_view_open">Open Navigation</string>
+    <string name="navigation_view_close">Close Navigation</string>
+
 
 </resources>

@@ -1,4 +1,4 @@
-package com.android.app_findjob.ui;
+package com.android.app_findjob.view.home.fragment;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -18,7 +18,6 @@ import com.android.app_findjob.databinding.FragmentJobBinding;
 import com.android.app_findjob.model.Employer;
 import com.android.app_findjob.model.Job;
 import com.android.app_findjob.model.JobActive;
-import com.android.app_findjob.ui.dashboard.DashboardViewModel;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -38,8 +37,6 @@ public class JobFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        DashboardViewModel dashboardViewModel =
-                new ViewModelProvider(this).get(DashboardViewModel.class);
 
         binding = FragmentJobBinding.inflate(inflater, container, false);
         View root = binding.getRoot();

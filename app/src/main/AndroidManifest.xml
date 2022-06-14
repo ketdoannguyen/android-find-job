@@ -12,48 +12,35 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.App_FindJob">
 
-        <!--
-             TODO: Before you run your application, you need a Google Maps API key.
 
-             To get one, follow the directions here:
-
-                https://developers.google.com/maps/documentation/android-sdk/get-api-key
-
-             Once you have your API key (it starts with "AIza"), define a new property in your
-             project's local.properties file (e.g. MAPS_API_KEY=Aiza...), and replace the
-             "YOUR_API_KEY" string in this file with "${MAPS_API_KEY}".
-        -->
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="YOUR_API_KEY" />
 
         <activity
             android:name=".Rss.Web_Blog"
-            android:exported="false" /> <!-- <intent-filter> -->
-        <!-- <action android:name="android.intent.action.MAIN" /> -->
-        <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-        <!-- </intent-filter> -->
-        <activity
-            android:name=".view.DetailEmployerActivity"
             android:exported="false" />
         <activity
-            android:name=".view.DetailJobActivity"
+            android:name=".view.home.activity.DetailEmployerActivity"
             android:exported="false" />
         <activity
-            android:name=".view.ForgetPasswordActivity"
+            android:name=".view.home.activity.DetailJobActivity"
             android:exported="false" />
         <activity
-            android:name=".view.RegisterActivity"
+            android:name=".view.home.activity.ForgetPasswordActivity"
             android:exported="false" />
         <activity
-            android:name=".view.LoginActivity"
+            android:name=".view.home.activity.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".view.HomeActivity"
+            android:name=".view.home.activity.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.admin.AdminActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.home.activity.HomeActivity"
             android:exported="false"
             android:theme="@style/FullScreen" />
         <activity
-            android:name=".view.MainActivity"
+            android:name=".view.home.activity.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

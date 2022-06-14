@@ -5,24 +5,24 @@
         android:icon="@drawable/ic_baseline_home_24"
         android:title="Home" />
     <item
-        android:id="@+id/nav_quanLyMA"
+        android:id="@+id/nav_job"
         android:icon="@drawable/img_12"
-        android:title="Manage Jobs" />
+        android:title="Manage Job" />
     <item
-        android:id="@+id/nav_quanLyDH"
+        android:id="@+id/nav_employer"
         android:icon="@drawable/img_17"
-        android:title="List Company" />
+        android:title="Manage Employer" />
     <item
-        android:id="@+id/nav_thongKe"
+        android:id="@+id/nav_blog"
         android:icon="@drawable/img_11"
         android:title="Manage Blog" />
     <item
-        android:id="@+id/nav_Profile"
+        android:id="@+id/nav_user"
         android:icon="@drawable/ic_person"
-        android:title="Storage Profile" />
+        android:title="Manage User" />
     <item
-        android:id="@+id/nav_DangXuat_admin"
-        android:icon="@drawable/ic_person"
+        android:id="@+id/nav_logout"
+        android:icon="@drawable/ic_logout"
         android:title="Logout" />
 
 </menu>

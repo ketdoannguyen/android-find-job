@@ -12,6 +12,7 @@
 
     <!-- custom colors -->
 
+    <color name="colorAccent">#FFEB3B</color>
     <color name="color_bgblog">#F5F5F5</color>
     <color name="color_yellow">#FF9900</color>
     <color name="color_text_blog">#990000</color>

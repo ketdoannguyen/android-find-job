@@ -1,4 +1,4 @@
-package com.android.app_findjob.view;
+package com.android.app_findjob.view.home.activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,15 +8,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Patterns;
+import android.view.WindowManager;
 import android.widget.Toast;
 
-import com.android.app_findjob.R;
 import com.android.app_findjob.databinding.ActivityForgetPasswordBinding;
-import com.android.app_findjob.databinding.ActivityLoginBinding;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.ktx.Firebase;
 
 public class ForgetPasswordActivity extends AppCompatActivity {
     private ActivityForgetPasswordBinding binding ;
@@ -44,6 +42,7 @@ public class ForgetPasswordActivity extends AppCompatActivity {
     private void init(){
         binding=ActivityForgetPasswordBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         progressDialog = new ProgressDialog(this);
     }
 

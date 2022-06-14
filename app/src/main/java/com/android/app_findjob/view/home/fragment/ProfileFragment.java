@@ -1,17 +1,13 @@
-package com.android.app_findjob.ui;
+package com.android.app_findjob.view.home.fragment;
 
-import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
-import android.os.Build;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
@@ -19,32 +15,16 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
-import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.RequiresApi;
-import androidx.appcompat.view.menu.MenuBuilder;
-import androidx.appcompat.view.menu.MenuPopupHelper;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
-import androidx.lifecycle.ViewModelProvider;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.app_findjob.R;
-import com.android.app_findjob.adapter.ListEmployerHomeAdapter;
-import com.android.app_findjob.adapter.ListJobHomeAdapter;
-import com.android.app_findjob.adapter.ListNotificationAdapter;
-import com.android.app_findjob.databinding.FragmentNotificationsBinding;
 import com.android.app_findjob.databinding.FragmentProfileBinding;
-import com.android.app_findjob.model.Employer;
-import com.android.app_findjob.model.Job;
-import com.android.app_findjob.model.Notification;
 import com.android.app_findjob.model.User;
-import com.android.app_findjob.ui.notifications.NotificationsViewModel;
-import com.android.app_findjob.view.LoginActivity;
+import com.android.app_findjob.view.home.activity.LoginActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -52,17 +32,15 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.StorageReference;
 
-import java.lang.reflect.Field;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
-import java.util.ArrayList;
 import java.util.Calendar;
 
 public class ProfileFragment extends Fragment {
 
     private FragmentProfileBinding binding;
-    private DatePickerDialog.OnDateSetListener setListener;
+    private StorageReference storageReference;
+    private DatabaseReference databaseReference;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -92,6 +70,9 @@ public class ProfileFragment extends Fragment {
             FirebaseAuth.getInstance().signOut();
             startActivity(new Intent(getContext(), LoginActivity.class));
             Toast.makeText(getContext(),"Log out succes",Toast.LENGTH_SHORT).show();
+        });
+        binding.txtUploadCV.setOnClickListener(view -> {
+            showDialogUploadCV();
         });
 
         return root;
@@ -173,6 +154,20 @@ public class ProfileFragment extends Fragment {
         });
 
         dialog.show();
+    }
+    private void showDialogUploadCV() {
+        final Dialog dialog = new Dialog(getContext());
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.dialog_uploadcv);
+
+        Window window = dialog.getWindow();
+        if (window == null) {
+            return;
+        }
+        window.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT);
+        window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        WindowManager.LayoutParams windowAttribute = window.getAttributes();
+        windowAttribute.gravity = Gravity.CENTER;
     }
 
 }

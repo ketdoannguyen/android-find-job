@@ -1,4 +1,4 @@
-package com.android.app_findjob.view;
+package com.android.app_findjob.view.home.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -139,6 +139,7 @@ public class DetailJobActivity extends AppCompatActivity {
     private void init(){
         binding=ActivityDetailJobBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
     private void getListDataFirebase(String idUser) {
         list = new ArrayList<>();

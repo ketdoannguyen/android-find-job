@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.app_findjob.R;
 import com.android.app_findjob.model.Employer;
-import com.android.app_findjob.view.DetailEmployerActivity;
+import com.android.app_findjob.view.home.activity.DetailEmployerActivity;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;

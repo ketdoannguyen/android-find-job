@@ -1,4 +1,4 @@
-package com.android.app_findjob.ui;
+package com.android.app_findjob.view.home.fragment;
 
 import android.os.Bundle;
 

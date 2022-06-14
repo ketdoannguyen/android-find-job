@@ -1,4 +1,4 @@
-package com.android.app_findjob.ui;
+package com.android.app_findjob.view.home.fragment;
 
 import android.os.Bundle;
 
@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import com.android.app_findjob.R;
 import com.android.app_findjob.databinding.FragmentProfileBinding;
 import com.android.app_findjob.databinding.FragmentSettingBinding;
+import com.android.app_findjob.view.home.fragment.ProfileFragment;
 
 public class SettingFragment extends Fragment {
 

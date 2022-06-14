@@ -1,4 +1,4 @@
-package com.android.app_findjob.view;
+package com.android.app_findjob.view.home.activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,10 +10,9 @@ import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.Patterns;
+import android.view.WindowManager;
 import android.widget.Toast;
 
-import com.android.app_findjob.R;
-import com.android.app_findjob.databinding.ActivityLoginBinding;
 import com.android.app_findjob.databinding.ActivityRegisterBinding;
 import com.android.app_findjob.model.User;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -45,6 +44,7 @@ public class RegisterActivity extends AppCompatActivity {
     private void init(){
         binding=ActivityRegisterBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         progressDialog = new ProgressDialog(this);
         onChangedText();
     }

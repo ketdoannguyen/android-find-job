@@ -9,6 +9,9 @@ public class Job  {
 
     private String status,timeApply = "" ;
 
+    public Job() {
+    }
+
     public Job(int id, int employerID, String name, String skill, String salary, String address, String city, String vacancies, String time, com.android.app_findjob.model.describe describe, com.android.app_findjob.model.request request) {
         this.id = id;
         this.employerID = employerID;

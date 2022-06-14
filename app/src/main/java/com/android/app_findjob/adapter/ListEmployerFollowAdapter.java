@@ -8,7 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -16,7 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.app_findjob.R;
 import com.android.app_findjob.model.Employer;
-import com.android.app_findjob.view.DetailEmployerActivity;
+import com.android.app_findjob.view.home.activity.DetailEmployerActivity;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;

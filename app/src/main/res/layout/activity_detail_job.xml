@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/bgr_pager"
     android:orientation="vertical"
-    tools:context=".view.DetailJobActivity">
+    tools:context=".view.home.activity.DetailJobActivity">
 
     <LinearLayout
         android:id="@+id/layoutMain"

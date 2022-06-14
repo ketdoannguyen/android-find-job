@@ -1,4 +1,4 @@
-package com.android.app_findjob.ui;
+package com.android.app_findjob.view.home.fragment;
 
 import android.app.Dialog;
 import android.graphics.Color;
@@ -23,7 +23,6 @@ import com.android.app_findjob.adapter.ListJobHomeAdapter;
 import com.android.app_findjob.databinding.FragmentHomeBinding;
 import com.android.app_findjob.model.Employer;
 import com.android.app_findjob.model.Job;
-import com.android.app_findjob.ui.home.HomeViewModel;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -44,8 +43,6 @@ public class HomeFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        HomeViewModel homeViewModel =
-                new ViewModelProvider(this).get(HomeViewModel.class);
 
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
