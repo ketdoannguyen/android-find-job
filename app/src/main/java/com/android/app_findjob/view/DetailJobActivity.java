@@ -81,6 +81,14 @@ public class DetailJobActivity extends AppCompatActivity {
                 binding.txtAddressJob.setText(job.getAddress());
                 binding.txtTime.setText(job.getTime());
 
+                binding.txtdes1.setText(job.getDescribe().getDes1());
+                binding.txtdes2.setText(job.getDescribe().getDes2());
+                binding.txtdes3.setText(job.getDescribe().getDes3());
+                binding.txtreq1.setText(job.getRequest().getReq1());
+                binding.txtreq2.setText(job.getRequest().getReq2());
+                binding.txtreq3.setText(job.getRequest().getReq3());
+                binding.txtreq4.setText(job.getRequest().getReq4());
+
             }
 
             @Override

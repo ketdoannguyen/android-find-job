@@ -2,33 +2,21 @@ package com.android.app_findjob.adapter;
 
 import android.content.Context;
 import android.content.Intent;
-import android.view.Gravity;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.PopupMenu;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.app_findjob.R;
-import com.android.app_findjob.Rss.Blog_RSS;
 import com.android.app_findjob.Rss.Web_Blog;
 import com.android.app_findjob.model.Blog;
-import com.android.app_findjob.model.Notification;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
 
-import java.lang.reflect.Field;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 
 public class ListBlogAdapter extends RecyclerView.Adapter<ListBlogAdapter.ListBlogViewHolder> {

@@ -2,14 +2,14 @@ package com.android.app_findjob.model;
 
 
 public class request  {
-    String req0 , req1, req2, req3= "";
+    String req4 , req1, req2, req3= "";
 
-    public String getReq0() {
-        return req0;
+    public String getReq4() {
+        return req4;
     }
 
-    public void setReq0(String req0) {
-        this.req0 = req0;
+    public void setReq4(String req0) {
+        this.req4 = req0;
     }
 
     public String getReq1() {

@@ -9,25 +9,26 @@
         android:id="@+id/navigation_home"
         android:name="com.android.app_findjob.ui.HomeFragment"
         android:label="Home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home"></fragment>
 
     <fragment
         android:id="@+id/navigation_job"
         android:name="com.android.app_findjob.ui.JobFragment"
         android:label="Job"
-        tools:layout="@layout/fragment_job" />
+        tools:layout="@layout/fragment_job"></fragment>
 
     <fragment
         android:id="@+id/navigation_blog"
         android:name="com.android.app_findjob.ui.BlogFragment"
         android:label="Blog"
-        tools:layout="@layout/fragment_blog" />
+        tools:layout="@layout/fragment_blog"></fragment>
 
     <fragment
         android:id="@+id/navigation_notifications"
         android:name="com.android.app_findjob.ui.NotificationsFragment"
         android:label="Notifications"
         tools:layout="@layout/fragment_notifications" />
+
     <fragment
         android:id="@+id/navigation_profile"
         android:name="com.android.app_findjob.ui.ProfileFragment"
@@ -36,5 +37,16 @@
         <action
             android:id="@+id/action_navigation_profile_to_navigation_job"
             app:destination="@id/navigation_job" />
+        <action
+            android:id="@+id/action_navigation_profile_to_settingFragment"
+            app:destination="@id/settingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.android.app_findjob.ui.SettingFragment"
+        android:label="SettingFragment">
+        <action
+            android:id="@+id/action_settingFragment_to_navigation_profile"
+            app:destination="@id/navigation_profile" />
     </fragment>
 </navigation>
