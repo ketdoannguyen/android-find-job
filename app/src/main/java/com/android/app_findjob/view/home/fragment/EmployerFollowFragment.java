@@ -69,7 +69,7 @@ public class EmployerFollowFragment extends Fragment {
                             Employer employer = (Employer) dataSnapshot.getValue(Employer.class);
                             employerList.add(employer);
 
-                            employerAdapter = new ListEmployerFollowAdapter(getContext(), employerList);
+                            employerAdapter = new ListEmployerFollowAdapter(getContext(), employerList , false);
 
                             GridLayoutManager layout = new GridLayoutManager(getContext(), 2, GridLayoutManager.VERTICAL, false);
                             rView.setLayoutManager(layout);

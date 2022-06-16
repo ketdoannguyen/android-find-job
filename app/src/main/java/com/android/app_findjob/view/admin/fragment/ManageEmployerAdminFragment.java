@@ -61,7 +61,7 @@ public class ManageEmployerAdminFragment extends Fragment {
                     Employer employer = (Employer) postSnapshotJob.getValue(Employer.class);
                     employerList.add(employer);
 
-                    employerAdapter = new ListEmployerFollowAdapter(getContext(), employerList);
+                    employerAdapter = new ListEmployerFollowAdapter(getContext(), employerList , true);
 
                     GridLayoutManager layout = new GridLayoutManager(getContext(), 2, GridLayoutManager.VERTICAL, false);
                     rView.setLayoutManager(layout);

@@ -85,7 +85,7 @@
                         </LinearLayout>
 
                         <EditText
-                            android:id="@+id/txtBirthday"
+                            android:id="@+id/txtCity"
                             android:layout_width="195dp"
                             android:layout_height="40dp"
                             android:layout_marginTop="7dp"
@@ -127,7 +127,7 @@
                         </LinearLayout>
 
                         <EditText
-                            android:id="@+id/txtPhone"
+                            android:id="@+id/txt_website"
                             android:layout_width="195dp"
                             android:layout_height="40dp"
                             android:layout_marginTop="7dp"
@@ -236,7 +236,7 @@
                 </LinearLayout>
 
                 <EditText
-                    android:id="@+id/txtEmail"
+                    android:id="@+id/txtActiveTime"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:layout_marginTop="7dp"
