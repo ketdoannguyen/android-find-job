@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/layout_user_admin"
+        android:layout_width="170dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="18dp"
+        android:background="@drawable/shape_item_user_admin"
+        android:orientation="vertical"
+        android:gravity="center|top">
+
+
+        <ImageView
+            android:id="@+id/imgViewEmployer"
+            android:layout_width="60dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="2dp"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/user_admin" />
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_above="@+id/txtPrice_list"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="2dp"
+            android:gravity="center"
+            android:fontFamily="monospace"
+            android:text="Gin"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/txtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/txtPrice_list"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="2dp"
+            android:gravity="center"
+            android:fontFamily="monospace"
+            android:text="xzwin2001@gmail.com"
+            android:textSize="12sp" />
+
+
+
+
+    </LinearLayout>
+
+</layout>

@@ -11,4 +11,13 @@
         android:layout_height="match_parent"
         android:text="BLOG" />
 
+    <ImageView
+        android:id="@+id/btn_add"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="340dp"
+        android:layout_marginTop="570dp"
+        android:src="@drawable/add_admin"
+        />
+
 </FrameLayout>

@@ -52,8 +52,14 @@ public class AdminActivity extends AppCompatActivity implements NavigationView.O
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,binding.drawerLayout,binding.toolbar,R.string.navigation_view_open,R.string.navigation_view_close);
         binding.drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
-
         binding.navigationView.setNavigationItemSelectedListener(this);
+
+        Intent i = getIntent();
+        String check = i.getStringExtra("AddEmployer");
+        if(check!=null && check.equals("true")){
+            replaceFragment(new ManageEmployerAdminFragment());
+            mCurrentFragment = FRAGMENT_EMPLOYER;
+        }
 
     }
 
@@ -101,7 +107,7 @@ public class AdminActivity extends AppCompatActivity implements NavigationView.O
         }
     }
 
-    private void replaceFragment(Fragment mFragment){
+    public void replaceFragment(Fragment mFragment){
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.context_fragment,mFragment);
         transaction.commit();

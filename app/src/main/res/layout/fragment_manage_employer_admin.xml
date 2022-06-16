@@ -1,14 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".view.admin.fragment.ManageEmployerAdminFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="EMPLOYER" />
+    <RelativeLayout
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="74dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/shape_title_admin">
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/txtTitleTip"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:letterSpacing="0.05"
+            android:text="MANAGE EMPLOYER"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="480dp"
+        android:layout_marginTop="70dp"
+        android:scrollbars="none">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listEmployerFollow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            tools:itemCount="1"
+            tools:listitem="@layout/z_list_employer_follow_item" />
+
+    </ScrollView>
+
+
+    <ImageView
+        android:id="@+id/btn_add"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="360dp"
+        android:layout_marginTop="570dp"
+        android:src="@drawable/add_admin" />
+
+
+</RelativeLayout>
