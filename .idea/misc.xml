@@ -16,74 +16,67 @@
         <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/drawable/shape_circle.xml" value="0.139" />
         <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/drawable/shape_detailjob.xml" value="0.111" />
         <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/drawable/shape_hot.xml" value="0.1565" />
-        <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/drawable/shape_item_user_admin.xml" value="0.179" />
         <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/drawable/shape_link.xml" value="0.188" />
         <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/drawable/shape_list.xml" value="0.2595" />
         <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/drawable/shape_name_apply.xml" value="0.2105" />
         <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/drawable/shape_search.xml" value="0.2105" />
-        <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/drawable/shape_select_file.xml" value="0.203" />
-        <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/drawable/shape_title_admin.xml" value="0.116" />
         <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/drawable/shape_txt_update_profile.xml" value="0.2105" />
         <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/drawable/shape_txt_update_profile_img.xml" value="0.2105" />
-        <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/drawable/shape_type_notification.xml" value="0.203" />
-        <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/activity_admin.xml" value="0.1" />
-        <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/activity_admin_add_employer.xml" value="0.264" />
         <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/activity_blog_rss.xml" value="0.264" />
         <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/activity_detail_employer.xml" value="0.264" />
         <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/activity_detail_job.xml" value="0.176" />
-        <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/activity_forget_password.xml" value="0.11458333333333333" />
         <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/activity_home.xml" value="0.2" />
         <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/activity_login.xml" value="0.18614130434782608" />
         <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/activity_main_admin.xml" value="0.18297101449275363" />
-        <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/activity_upload_cvactivity.xml" value="0.18297101449275363" />
         <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/activity_web_blog.xml" value="0.12864583333333332" />
         <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/activity_zlist_item_blog.xml" value="0.1897644927536232" />
-        <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/dialog.xml" value="0.12864583333333332" />
         <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/dialog_apply.xml" value="0.264" />
         <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/dialog_search.xml" value="0.2" />
         <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/dialog_update_profile.xml" value="0.2" />
-        <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/dialog_uploadcv.xml" value="0.4" />
-        <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/dialog_user_admin.xml" value="0.2" />
         <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/fragment_blog.xml" value="0.264" />
         <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/fragment_dashboard.xml" value="0.2" />
-        <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/fragment_detail_fragment.xml" value="0.1897644927536232" />
-        <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/fragment_detail_job.xml" value="0.1897644927536232" />
         <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/fragment_employer.xml" value="0.1897644927536232" />
-        <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/fragment_employer_follow.xml" value="0.18297101449275363" />
         <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/fragment_home.xml" value="0.2" />
-        <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/fragment_home_admin.xml" value="0.18297101449275363" />
         <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/fragment_job.xml" value="0.264" />
-        <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/fragment_manage_blog_admin.xml" value="0.18297101449275363" />
-        <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/fragment_manage_employer_admin.xml" value="0.18297101449275363" />
-        <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/fragment_manage_job_admin.xml" value="0.18297101449275363" />
-        <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/fragment_manage_user_admin.xml" value="0.18297101449275363" />
-        <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/fragment_notifications.xml" value="0.2" />
+        <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/fragment_notifications.xml" value="0.11302083333333333" />
         <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/fragment_profile.xml" value="0.176" />
-        <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/fragment_setting.xml" value="0.1897644927536232" />
-        <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/nav_header_main_admin.xml" value="0.264" />
         <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/z_categories_item_view.xml" value="0.18614130434782608" />
-        <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/z_list_blog_item.xml" value="0.3942652329749104" />
-        <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/z_list_employer_follow_item.xml" value="0.264" />
+        <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/z_list_blog_item.xml" value="0.4" />
         <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/z_list_employer_item_home.xml" value="0.264" />
         <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/z_list_job_item_home.xml" value="0.536" />
         <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/z_list_notification.xml" value="0.4" />
-        <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/layout/z_list_user_item_admin.xml" value="0.4194915254237288" />
         <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/menu/bottom_nav_menu.xml" value="0.11302083333333333" />
         <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/menu/main_menu_notification.xml" value="0.25416666666666665" />
-        <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/menu/menu_admin.xml" value="0.25" />
         <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/menu/show_menu_notification.xml" value="0.1" />
-        <entry key="..\:/AndroidProject/App_FindJob/app/src/main/res/menu/show_menu_user.xml" value="0.1" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/App_FindJob/app/src/main/res/font/crafty_girls.xml" value="0.19537037037037036" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/App_FindJob/app/src/main/res/layout/activity_forget_password.xml" value="0.16621376811594202" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/App_FindJob/app/src/main/res/layout/activity_home.xml" value="0.16621376811594202" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/App_FindJob/app/src/main/res/layout/activity_login.xml" value="0.16621376811594202" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/App_FindJob/app/src/main/res/layout/activity_main.xml" value="0.16621376811594202" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/App_FindJob/app/src/main/res/layout/activity_register.xml" value="0.16621376811594202" />
+        <entry key="..\:/Users/Duc/Desktop/App_FindJob/app/src/main/res/layout/activity_admin.xml" value="0.25" />
+        <entry key="..\:/Users/Duc/Desktop/App_FindJob/app/src/main/res/layout/activity_admin_add_employer.xml" value="0.25" />
+        <entry key="..\:/Users/Duc/Desktop/App_FindJob/app/src/main/res/layout/activity_manage_job.xml" value="0.20652173913043478" />
+        <entry key="..\:/Users/Duc/Desktop/App_FindJob/app/src/main/res/layout/activity_register.xml" value="0.20652173913043478" />
+        <entry key="..\:/Users/Duc/Desktop/App_FindJob/app/src/main/res/layout/activity_web_blog.xml" value="0.20652173913043478" />
+        <entry key="..\:/Users/Duc/Desktop/App_FindJob/app/src/main/res/layout/dialog_apply.xml" value="0.20652173913043478" />
+        <entry key="..\:/Users/Duc/Desktop/App_FindJob/app/src/main/res/layout/dialog_update_profile.xml" value="0.2" />
+        <entry key="..\:/Users/Duc/Desktop/App_FindJob/app/src/main/res/layout/dialog_uploadcv.xml" value="0.20652173913043478" />
+        <entry key="..\:/Users/Duc/Desktop/App_FindJob/app/src/main/res/layout/dialog_user_admin.xml" value="0.20652173913043478" />
+        <entry key="..\:/Users/Duc/Desktop/App_FindJob/app/src/main/res/layout/fragment_employer_follow.xml" value="0.20652173913043478" />
+        <entry key="..\:/Users/Duc/Desktop/App_FindJob/app/src/main/res/layout/fragment_home.xml" value="0.20652173913043478" />
+        <entry key="..\:/Users/Duc/Desktop/App_FindJob/app/src/main/res/layout/fragment_home_admin.xml" value="0.20652173913043478" />
+        <entry key="..\:/Users/Duc/Desktop/App_FindJob/app/src/main/res/layout/fragment_job.xml" value="0.20652173913043478" />
+        <entry key="..\:/Users/Duc/Desktop/App_FindJob/app/src/main/res/layout/fragment_manage_blog_admin.xml" value="0.20652173913043478" />
+        <entry key="..\:/Users/Duc/Desktop/App_FindJob/app/src/main/res/layout/fragment_manage_employer_admin.xml" value="0.2" />
+        <entry key="..\:/Users/Duc/Desktop/App_FindJob/app/src/main/res/layout/fragment_manage_job_admin.xml" value="0.20652173913043478" />
+        <entry key="..\:/Users/Duc/Desktop/App_FindJob/app/src/main/res/layout/fragment_manage_user_admin.xml" value="0.20652173913043478" />
+        <entry key="..\:/Users/Duc/Desktop/App_FindJob/app/src/main/res/layout/z_list_employer_follow_item.xml" value="0.25" />
+        <entry key="..\:/Users/Duc/Desktop/App_FindJob/app/src/main/res/layout/z_list_job_item_home.xml" value="0.20652173913043478" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
