@@ -90,7 +90,7 @@ public class JobFragment extends Fragment {
 
                                     jobList.add(job);
                                     if(jobList.size() != 0){
-                                        jobAdapter = new ListJobHomeAdapter(getContext(), jobList);
+                                        jobAdapter = new ListJobHomeAdapter(getContext(), jobList,false);
                                         LinearLayoutManager layout = new LinearLayoutManager(getContext());
                                         rView.setLayoutManager(layout);
                                         rView.setAdapter(jobAdapter);

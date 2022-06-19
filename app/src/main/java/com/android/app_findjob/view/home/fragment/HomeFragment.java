@@ -82,7 +82,7 @@ public class HomeFragment extends Fragment {
                             job.setEmployer(employer);
                             jobList.add(job);
 
-                            jobAdapter = new ListJobHomeAdapter(getContext(), jobList);
+                            jobAdapter = new ListJobHomeAdapter(getContext(), jobList,false);
                             LinearLayoutManager layout = new LinearLayoutManager(getContext());
                             rView1.setLayoutManager(layout);
                             rView1.setAdapter(jobAdapter);

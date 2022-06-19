@@ -2,7 +2,18 @@ package com.android.app_findjob.model;
 
 
 public class request  {
-    String req4 , req1, req2, req3= "";
+
+    public request() {
+    }
+
+    public request(String req1, String req2, String req3, String req4) {
+        this.req1 = req1;
+        this.req2 = req2;
+        this.req3 = req3;
+        this.req4 = req4;
+    }
+
+    String  req1, req2, req3,req4 = "";
 
     public String getReq4() {
         return req4;

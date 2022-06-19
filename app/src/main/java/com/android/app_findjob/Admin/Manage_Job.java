@@ -94,7 +94,7 @@ public class Manage_Job extends Fragment{
 //                    lst.add(_newJob);
                 }
                 Toast.makeText(getContext(), lst.size()+"", Toast.LENGTH_SHORT).show();
-                ListJobHomeAdapter adapter = new ListJobHomeAdapter(getContext(),lst);
+                ListJobHomeAdapter adapter = new ListJobHomeAdapter(getContext(),lst,true);
                 recyclerView.setAdapter(adapter);
                 recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
             }

@@ -6,6 +6,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
@@ -15,6 +16,7 @@ import android.view.ViewGroup;
 import com.android.app_findjob.Admin_AddJob_Activity;
 import com.android.app_findjob.adapter.ListJobHomeAdapter;
 import com.android.app_findjob.databinding.FragmentManageJobAdminBinding;
+import com.android.app_findjob.model.Employer;
 import com.android.app_findjob.model.Job;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -56,15 +58,29 @@ public class ManageJobAdminFragment extends Fragment {
         mDatabaseJobHeart.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshotJob) {
+                JobList.removeAll(JobList);
                 for (DataSnapshot postSnapshotJob : dataSnapshotJob.getChildren()) {
                     Job job = (Job) postSnapshotJob.getValue(Job.class);
-                    JobList.add(job);
+                    DatabaseReference mDatabaseEmployer = FirebaseDatabase.getInstance().getReference("Employer/" + job.getEmployerID());
+                    mDatabaseEmployer.addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshotEmployer) {
+                            Employer employer = (Employer) dataSnapshotEmployer.getValue(Employer.class);
 
-                    JobAdapter = new JobAdapter(getContext(), JobList , true);
+                            job.setEmployer(employer);
+                            JobList.add(job);
 
-                    GridLayoutManager layout = new GridLayoutManager(getContext(), 2, GridLayoutManager.VERTICAL, false);
-                    rView.setLayoutManager(layout);
-                    rView.setAdapter(JobAdapter);
+                            JobAdapter = new ListJobHomeAdapter(getContext(), JobList,true);
+                            LinearLayoutManager layout = new LinearLayoutManager(getContext());
+                            rView.setLayoutManager(layout);
+                            rView.setAdapter(JobAdapter);
+                        }
+
+                        @Override
+                        public void onCancelled(DatabaseError databaseError) {
+                        }
+                    });
+
 
                 }
             }

@@ -159,7 +159,7 @@ public class DetailEmployerActivity extends AppCompatActivity {
                                 Employer employer = (Employer) dataSnapshotEmployer.getValue(Employer.class);
                                 job.setEmployer(employer);
                                 jobList.add(job);
-                                jobAdapter = new ListJobHomeAdapter(DetailEmployerActivity.this, jobList);
+                                jobAdapter = new ListJobHomeAdapter(DetailEmployerActivity.this, jobList , false);
                                 LinearLayoutManager layout = new LinearLayoutManager(DetailEmployerActivity.this);
                                 rView.setLayoutManager(layout);
                                 rView.setAdapter(jobAdapter);
