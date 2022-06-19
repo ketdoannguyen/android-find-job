@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.android.app_findjob.Admin_AddJob_Activity;
 import com.android.app_findjob.adapter.ListJobHomeAdapter;
 import com.android.app_findjob.databinding.FragmentManageJobAdminBinding;
 import com.android.app_findjob.model.Job;
